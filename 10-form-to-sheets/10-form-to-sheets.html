@@ -1,22 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>
-      10: Form to Google Sheets
-    </title>
-  </head>
-  <body>
 
-    <form action="https://script.google.com/macros/s/AKfycbx_k22UijbL8nV_HE_eFCqonZ5LtCmyZqLd_wvG3_lWoAdLGWI/exec" method="POST">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>
+    10: Form to Google Sheets
+  </title>
+</head>
 
-      <!--
-        The google sheet can be found at: https://docs.google.com/spreadsheets/d/1Vnkb5rE1kgXFMt2So3RwfvfLwayVtATt1o9NM-ry9UI/edit?usp=sharing
-        Create a field for each cell in the Google Sheet.
-      -->
+<body>
 
-      <button type="submit">Save</button>
-    </form>
-  </body>
+  <form action="https://script.google.com/macros/s/AKfycbx_k22UijbL8nV_HE_eFCqonZ5LtCmyZqLd_wvG3_lWoAdLGWI/exec"
+    method="POST">
+    <ul>
+      <li>
+        <label>Contributor<br>
+          <input type="text" name="contributor">
+        </label>
+      </li>
+      <li>
+        <label>Artist name<br>
+          <input type="text" name="artist_name">
+        </label>
+      </li>
+      <li>
+        <label>Artist id<br>
+          <input type="text" name="artist_id">
+        </label>
+      </li>
+      <li>
+        <label>Genre<br>
+          <select name="genre">
+            <option value="slow">Slow</option>
+            <option value="pop">Pop</option>
+            <option value="rock">Rock</option>
+            <option value="salegy">Salegy</option>
+            <option value="malesa">Malesa</option>
+            <option value="basesa">Basesa</option>
+          </select>
+        </label>
+      </li>
+      <li>
+        <label>Photo url<br>
+          <input type="url" name="photo_url">
+        </label>
+      </li>
+      <li>
+        <label>Biography<br>
+          <textarea id="biography" rows="10" maxlength="500" name="biography"></textarea>
+        </label>
+      </li>
+      <li>
+        <label>Website<br>
+          <input type="text" name="website">
+        </label>
+      </li>
+    </ul>
+    <button type="submit">Save</button>
+  </form>
+</body>
+
 </html>
