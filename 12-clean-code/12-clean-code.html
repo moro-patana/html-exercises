@@ -31,7 +31,7 @@
               <span class="a11y">MySwipe menu</span>
                 <svg viewBox="0 0 32 32" focusable="false">
                   <use id="icon_user" xlink:href="/identity/assets/sprite-9a011e67b1e76863eef72288064fc94054fce1a19b27b97f791619730534df97.svg#svg_user" />
-                    </svg>
+                </svg>
 
             </label>
 
@@ -82,21 +82,23 @@
           <div class=form_row>
             <label for=user_email>email</label>
               <div class="form_field">
-                <input required="required" autocomplete="email" type="email" value="" name="user[email]" id="user_email" /></div>
+               <input required="required" autocomplete="email" type="email" value="" name="user[email]" id="user_email" />
               </div>
-
-          <div class=form_row>
-            <label for=user_password>password</label>
-              <div class="form_field">
-                <input required="required" autocomplete="current-password" type="password" name="user[password]" id="user_password" /></input>
           </div>
+
+        <div class=form_row>
+          <label for=user_password>password</label>
+            <div class="form_field">
+              <input required="required" autocomplete="current-password" type="password" name="user[password]" id="user_password" />
+            </div>
+        </div>
 
         <div class=form_row>
           <div class="form_field checkbox_confirm">
               <input name="user[remember_me]" type=hidden value="0" />
-               <input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
+              <input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me" />
               <label for=user_remember_me>
-                  <span>Remember me</span>
+              <span>Remember me</span>
               </label>
           </div>
         </div>
