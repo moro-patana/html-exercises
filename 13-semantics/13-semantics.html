@@ -17,108 +17,143 @@
 
       <section>
         <h2>A menu of a list of links</h2>
-        <!--
-          1. Create a list of links to form a navigational element. The links are:
-            - "Home" links to "/"
-            - "Our services" links to "/services"
-            - "About us" links to "/about"
-            - "Contact us" links to "/contact"
-        -->
+           <ul>
+              <li>
+                 <a href="/">Home</a>
+              </li>
+              <li>
+                 <a href="/services">Our services</a>
+              </li>
+              <li>
+                 <a href="/about">About us</a>
+              </li>
+              <li>
+                 <a href="/contact">Contact us</a>
+              </li>
       </section>
 
       <section>
         <h2>A profile update form</h2>
-        <!--
-          2. Build a form that posts to "/profile/save". In this form we want the user to be able to update their profile, the form needs the following…
+           <ul>
+              <li>
+                 <label>First name<br>
+                 <input type="text" name="profile_first_name" required>
+                 </label>
+              </li>
 
-          The user's:
-            - First name and Family name, to be saved as "profile_first_name" and "profile_family_name" respectively. This is required.
-            - Email, mandatory, to be saved as "username".
-            - Phone number, optional, to be saved as "phone".
-            - Gender, optional, as "gender", with the following choices:
-              - Male, as "m"
-              - Female, as "f"
-              - Prefer to not disclose, "na"
-            - Photo, optional, as "profile_photo". The user can upload a photo if they want. We only accept PNGs, JPGs, and WebP formats.
-        -->
+              <li>
+                 <label>Family name<br>
+                 <input type="text" name="profile_family_name" required>
+                 </label>
+              </li>
+
+              <li>
+                 <label>Username<br>
+                 <input type="email" name="username">
+                 </label>
+              </li>
+
+              <li>
+                 <label>Phone<br>
+                 <input type="phone_number" name="phone">
+                 </label>
+              </li>
+
+          <li>
+            <label>Genre<br>
+              <select name="gender">
+                <option value="m">Male</option>
+                <option value="f">Female</option>
+              </select>
+            </label>
+          </li>
+
+          <li>
+            <label>Profile url<br>
+              <input type="url" name="profile_url">
+            </label>
+          </li>
+        </ul>
       </section>
 
       <section>
         <h2>An excerpt</h2>
-        <!--
-          3. This excerpt is from a short story called "The story of your life" by "Ted Chiang". Supply the attribution to the author and their title, then mark-up the following excerpt correctly:
-
-          "The only reason you had me was so you could get a maid you wouldn't have to pay," you'll say bitterly, dragging the vacuum cleaner out of the closet.
-
-          "That's right!" I'll say. "Thirteen years ago I knew the carpets would need vacuuming around now, and having a baby seemed to be the cheapest and easiest way to get the job done. Now kindly get on with it."
-
-          "If you weren't my mother, this would be illegal," you'll say, seething as you unwind the power cord and plug it into the wall outlet.
-        -->
+          <p><q>The only reason you had me was so you could get a maid you wouldn't have to pay,</q> you'll say bitterly, dragging the vacuum cleaner out of the closet.
+          <q>That's right!</q> I'll say. <q>Thirteen years ago I knew the carpets would need vacuuming around now, and having a baby seemed to be the cheapest and easiest way to get the job done. Now kindly get on with it.</q>
+          <q>If you weren't my mother, this would be illegal,</q> you'll say, seething as you unwind the power cord and plug it into the wall outlet.</p>
       </section>
 
       <section>
         <h2>A table</h2>
-        <!--
-          4. We need a table, with the following column headers:
+          <table>
+            <thead>
+              <tr>
+                <th scope="col" id="header-name">Name</th>
+                <th scope="col" id="header-age">Age</th>
+                <th scope="col" id="header-weight">Weight</th>
+                <th scope="col" id="header-height">Height</th>
+              </tr>
+            </thead>
 
-            - Name
-            - Age
-            - Weight
-            - Height
+            <tbody>
 
-          Then we need rows for each student, their details are as follows:
+              <tr>
+                  <th headers="header-name" scope="row" id="row-fred">Fred</th>
+                  <td headers="row-fred header-age">23</td>
+                  <td headers="row-fred header-weight">74 Kg</td>
+                  <td headers="row-fred header-height">182 Cm</td>
+              </tr>
 
-            - Fred, 23, 74kg, 182cm
-            - Anne, 26, 56kg, 173cm
-            - Judith, 19, 51kg, 168cm
+              <tr>
+                  <th headers="header-name" scope="row" id="row-anne">Anne</th>
+                  <td headers="row-anne header-age">26</td>
+                  <td headers="row-anne header-weight">56 Kg</td>
+                  <td headers="row-anne header-height">173 Cm</td>
+               </tr>
 
-          Please provide a summary of the student's information.
-        -->
+              <tr>
+                  <th headers="header-name" scope="row" id="row-judith">Judith</th>
+                  <td headers="row-judith header-age">19</td>
+                  <td headers="row-judith header-weight">51 Kg</td>
+                  <td headers="row-judith header-height">168 Cm</td>
+              </tr>
+            </tbody>
+        </table>
       </section>
 
       <section>
         <h2>Search results</h2>
-        <!--
-          5. Create a search results page in this folder and link to it from here.
-
-          In this new page you create…
-
-          After a user has entered a search term, we need to display the results of the search back to the user, so that they can click through to the page(s) that match their search.
-
-          This page needs the following structure:
-
-            - A header that includes:
-              - the name of the page
-              - a summary of the number of results
-              - the entered search term.
-              - a link back to search again, at "/search"
-            - A list of page results that match the term, which should include:
-              - The page title
-              - A link to the page
-              - A summary of where the entered search term matches the page
-
-          Here is the entered search term: "critical thinking"
-
-          And here are the results, with their excerpts:
-
-            Title: "Wikipedia: Critical Thinking"
-            URL: https://en.wikipedia.org/wiki/Critical_thinking
-            Excerpt:
-              According to Ennis, “Critical thinking is the intellectually disciplined process of actively and skillfully conceptualizing, applying, analyzing, synthesizing, and/or evaluating information gathered from, or generated by, observation, experience, reflection, reasoning, or communication, as a guide to belief and action.
-
-            Title: "Critical Thinking | SkillsYouNeed"
-            URL: https://www.skillsyouneed.com/learn/critical-thinking.html
-            Excerpt:
-              Develop your critical thinking skills. Boost your ability to solve problems and make the right decisions at work, home and in study.
-        -->
+          <a href="search.html">Search page</a>
       </section>
+
       <section>
         <h2>A definition</h2>
-        <!--
-          6. Create the HTML necessary for the image `markup.png` in this folder.
-          It is a definition of the word 'Markup'.
-        -->
-        <img src="markup.png" alt="There are three definitions for the word 'Markup'">
+           <dl>
+             <dt>
+              <strong> markup</strong><br>
+               <samp>/ˈmɑːkʌp/</samp><br>
+                <em>noun</em><br>
+               noun: <b>markup</b>; plural noun: <b>markups</b>; noun: <b>mark-up</b>; plural noun: <b>mark-ups</b>
+             </dt>
+
+             <dd>
+               <ol>
+                 <li>
+                   <p> the amount added to the cost price of good to cover overheads and profit.<br>
+                   <q>a markup of 50 per cent</q></p>
+                     </li>
+                     <li>
+                     <p> the process or result of correcting text in preparation for printing.</p>
+                 </li>
+
+                 <li>
+                   <mark>computing</mark><br>
+                   a set of tags assigned to elements of a text to indicate their relation to the rest of the text or dictate how they should be displeyed.<br>
+                   <q>markup languages</q>
+                 </li>
+              </ol>
+
+            <img src="markup.png" alt="There are three definitions for the word 'Markup'">
       </section>
 
     </main>
