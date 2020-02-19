@@ -16,19 +16,22 @@
     <ul>
       <li>
         <label>Contributor<br>
-          <input type="text" name="contributor">
+          <input type="text" name="contributor" value="manjaka">
         </label>
       </li>
+
       <li>
         <label>Artist name<br>
-          <input type="text" name="artist_name">
+          <input type="text" name="artist_name" required>
         </label>
       </li>
+
       <li>
         <label>Artist id<br>
-          <input type="text" name="artist_id">
+          <input type="text" name="artist_id"required>
         </label>
       </li>
+
       <li>
         <label>Genre<br>
           <select name="genre">
@@ -41,22 +44,27 @@
           </select>
         </label>
       </li>
+
       <li>
         <label>Photo url<br>
           <input type="url" name="photo_url">
         </label>
       </li>
+
       <li>
         <label>Biography<br>
-          <textarea id="biography" rows="10" maxlength="500" name="biography"></textarea>
+          <textarea id="biography" rows="10" col="100" maxlength="500" name="biography"></textarea>
         </label>
       </li>
+
       <li>
         <label>Website<br>
           <input type="text" name="website">
         </label>
       </li>
+
     </ul>
+
     <button type="submit">Save</button>
   </form>
 </body>
