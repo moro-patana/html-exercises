@@ -1,161 +1,165 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>
-      13: Semantic HTML
-    </title>
-  </head>
-  <body>
-    <header>
-      <h1>
-        Semantic HTML
-      </h1>
-    </header>
-    <main>
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width">
+      <title>
+        13: Semantic HTML
+      </title>
+    </head>
+    <body>
+      <header>
+        <h1>
+          Semantic HTML
+        </h1>
+      </header>
+      <main>
 
-      <section>
-        <h2>A menu of a list of links</h2>
-           <ul>
-              <li>
-                 <a href="/">Home</a>
-              </li>
-              <li>
-                 <a href="/services">Our services</a>
-              </li>
-              <li>
-                 <a href="/about">About us</a>
-              </li>
-              <li>
-                 <a href="/contact">Contact us</a>
-              </li>
-      </section>
+        <section>
+          <h2>A menu of a list of links</h2>
+          <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/services">Our services</a></li>
+                <li>
+                  <a href="/about">About us</a>
+                </li>
+                <li>
+                  <a href="/contact">Contact us</a>
+                </li>
+            </ul>
+          </nav>
+        </section>
 
-      <section>
-        <h2>A profile update form</h2>
-           <ul>
+        <section>
+          <h2>A profile update form</h2>
+            <ul>
               <li>
-                 <label>First name<br>
+                <label>First name<br>
                  <input type="text" name="profile_first_name" required>
-                 </label>
+                </label>
               </li>
 
-              <li>
-                 <label>Family name<br>
-                 <input type="text" name="profile_family_name" required>
-                 </label>
-              </li>
+                <li>
+                  <label>Family name<br>
+                    <input type="text" name="profile_family_name" required>
+                  </label>
+                </li>
 
-              <li>
-                 <label>Username<br>
-                 <input type="email" name="username">
-                 </label>
-              </li>
+                <li>
+                  <label>Email<br>
+                    <input type="email" name="username" required>
+                  </label>
+                </li>
 
-              <li>
-                 <label>Phone<br>
-                 <input type="phone_number" name="phone">
-                 </label>
-              </li>
+                <li>
+                  <label>Phone number<br>
+                    <input type="number" name="phone">
+                  </label>
+                </li>
 
-          <li>
-            <label>Genre<br>
-              <select name="gender">
-                <option value="m">Male</option>
-                <option value="f">Female</option>
-              </select>
-            </label>
-          </li>
+            <li>
+              <label>Genre<br>
+                <select name="gender">
+                  <option name="male" value="m">Male</option>
+                  <option  name="female" value="f">Female</option>
+                  <option  name="
+                </select>
+              </label>
+            </li>
+            <li>
 
-          <li>
-            <label>Profile url<br>
-              <input type="url" name="profile_url">
-            </label>
-          </li>
-        </ul>
-      </section>
+            <form method="POST" action="/profile/save" enctype="multipart/form-data">
+              <label for="photo">Photo (optional)</label><br>
+                <input type="file" id="photo" name="profile_photo" accept="image/png, image/jpeg, image/webp">
+            </li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>An excerpt</h2>
-          <p><q>The only reason you had me was so you could get a maid you wouldn't have to pay,</q> you'll say bitterly, dragging the vacuum cleaner out of the closet.
-          <q>That's right!</q> I'll say. <q>Thirteen years ago I knew the carpets would need vacuuming around now, and having a baby seemed to be the cheapest and easiest way to get the job done. Now kindly get on with it.</q>
-          <q>If you weren't my mother, this would be illegal,</q> you'll say, seething as you unwind the power cord and plug it into the wall outlet.</p>
-      </section>
+        <section>
+          <h2>An excerpt</h2>
+          <p>An excerpt of "The story of your life" by "Ted Chian"</p>
+          <blockquote>
+            <p>The only reason you had me was so you could get a maid you wouldn't have to pay, you'll say bitterly, dragging the vacuum cleaner out of the closet.</p>
+            <p>That's right! I'll say. Thirteen years ago I knew the carpets would need vacuuming around now, and having a baby seemed to be the cheapest and easiest way to get the job done. Now kindly get on with it.</p>
+            <p>If you weren't my mother, this would be illegal, you'll say, seething as you unwind the power cord and plug it into the wall outlet.</p>
+          </blockquote>
 
-      <section>
-        <h2>A table</h2>
-          <table>
-            <thead>
-              <tr>
-                <th scope="col" id="header-name">Name</th>
-                <th scope="col" id="header-age">Age</th>
-                <th scope="col" id="header-weight">Weight</th>
-                <th scope="col" id="header-height">Height</th>
-              </tr>
-            </thead>
+        <section>
+          <h2>A table</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col" id="header-name">Name</th>
+                  <th scope="col" id="header-age">Age</th>
+                  <th scope="col" id="header-weight">Weight</th>
+                  <th scope="col" id="header-height">Height</th>
+                </tr>
+              </thead>
 
-            <tbody>
+              <tbody>
 
-              <tr>
-                  <th headers="header-name" scope="row" id="row-fred">Fred</th>
-                  <td headers="row-fred header-age">23</td>
-                  <td headers="row-fred header-weight">74 Kg</td>
-                  <td headers="row-fred header-height">182 Cm</td>
-              </tr>
+                <tr>
+                    <th headers="header-name" scope="row" id="row-fred">Fred</th>
+                    <td headers="row-fred header-age">23</td>
+                    <td headers="row-fred header-weight">74 Kg</td>
+                    <td headers="row-fred header-height">182 Cm</td>
+                </tr>
 
-              <tr>
-                  <th headers="header-name" scope="row" id="row-anne">Anne</th>
-                  <td headers="row-anne header-age">26</td>
-                  <td headers="row-anne header-weight">56 Kg</td>
-                  <td headers="row-anne header-height">173 Cm</td>
-               </tr>
+                <tr>
+                    <th headers="header-name" scope="row" id="row-anne">Anne</th>
+                    <td headers="row-anne header-age">26</td>
+                    <td headers="row-anne header-weight">56 Kg</td>
+                    <td headers="row-anne header-height">173 Cm</td>
+                </tr>
 
-              <tr>
-                  <th headers="header-name" scope="row" id="row-judith">Judith</th>
-                  <td headers="row-judith header-age">19</td>
-                  <td headers="row-judith header-weight">51 Kg</td>
-                  <td headers="row-judith header-height">168 Cm</td>
-              </tr>
-            </tbody>
-        </table>
-      </section>
+                <tr>
+                    <th headers="header-name" scope="row" id="row-judith">Judith</th>
+                    <td headers="row-judith header-age">19</td>
+                    <td headers="row-judith header-weight">51 Kg</td>
+                    <td headers="row-judith header-height">168 Cm</td>
+                </tr>
+              </tbody>
+          </table>
+        </section>
 
-      <section>
-        <h2>Search results</h2>
-          <a href="search.html">Search page</a>
-      </section>
+        <section>
+          <h2>Search results</h2>
+            <a href="search.html">Search page</a>
+        </section>
 
-      <section>
-        <h2>A definition</h2>
-           <dl>
-             <dt>
-              <strong> markup</strong><br>
-               <samp>/ˈmɑːkʌp/</samp><br>
-                <em>noun</em><br>
-               noun: <b>markup</b>; plural noun: <b>markups</b>; noun: <b>mark-up</b>; plural noun: <b>mark-ups</b>
-             </dt>
+        <section>
+          <h2>A definition</h2>
+            <dl>
+              <dt>
+                <h2> markup</h2><br>
+                <p>/ˈmɑːkʌp/</p><br>
+                  <em>noun</em><br>
+                    <p>noun: <b>markup</b>; plural noun: <b>markups</b>; noun: <b>mark-up</b>; plural noun: <b>mark-ups</b></p>
+              </dt>
 
-             <dd>
-               <ol>
-                 <li>
-                   <p> the amount added to the cost price of good to cover overheads and profit.<br>
-                   <q>a markup of 50 per cent</q></p>
-                     </li>
-                     <li>
-                     <p> the process or result of correcting text in preparation for printing.</p>
-                 </li>
+              <dd>
+                <ol>
+                  <li>
+                    <p> the amount added to the cost price of good to cover overheads and profit.<br>
+                      <q>a markup of 50 per cent</q></p>
+                      </li>
+                      <li>
+                      <p> the process or result of correcting text in preparation for printing.</p>
+                  </li>
 
-                 <li>
-                   <mark>computing</mark><br>
-                   a set of tags assigned to elements of a text to indicate their relation to the rest of the text or dictate how they should be displeyed.<br>
-                   <q>markup languages</q>
-                 </li>
-              </ol>
+                  <li>
+                    <span>computing</span>
+                    <p> a set of tags assigned to elements of a text to indicate their relation to the rest of the text or dictate how they should be displeyed.<br>
+                    <q>markup languages</q></p>
+                  </li>
+                </ol>
+                </dd>
+              </dl>
 
-            <img src="markup.png" alt="There are three definitions for the word 'Markup'">
-      </section>
+              <img src="markup.png" alt="There are three definitions for the word 'Markup'">
+        </section>
 
-    </main>
-  </body>
-</html>
+      </main>
+    </body>
+  </html>
